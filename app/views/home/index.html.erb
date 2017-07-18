@@ -1,10 +1,17 @@
+<form action="/home/result" type="get">
+    <input type="text" name="input_search">
+    <input type="submit" value="검색">
+</form>
 
-<% @titles.each do |t| %>
-<a href="https://www.youtube.com/"><p><%= t %></p></a>
+
+
+<% @hrefs.each_with_index do |t,i| %>
+  
+<a href="https://www.youtube.com/<%=t %>"><p><%= @titles[i] %></p></a>
+
 <%end %>
 
 
 <% @hrefs.each do |t| %>
-<p><%=t%></p>
-<% end%>
-
+<p><%= t %></p>
+<%end %>

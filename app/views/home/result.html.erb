@@ -1,0 +1,14 @@
+<form action="/home/result" type="get">
+    <input type="text" name="input_search" value=<%= params[:input_search]%>>
+    <input type="submit" value="검색">
+</form>
+
+
+
+<% @r_hrefs.each_with_index do |h,i| %>
+<a href="https://www.youtube.com/<%=h %>"> <p><%=@searchresult[i] %></p></a>
+
+<%end %>
+
+
+
